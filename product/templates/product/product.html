@@ -1,0 +1,26 @@
+<div class="row mt-5">
+    <div class="col-12">
+        <table class="table table-light">
+            <thead class="thead-light">
+                <tr>
+                    <th space="col">#</th>
+                    <th space="col">상품명</th>
+                    <th space="col">가격</th>
+                    <th space="col">등록날짜</th>
+                </tr>
+            </thead>
+            <tbody class="text-dark">
+                {% for product in product_list %}
+                <tr>
+                    <th space="row">{{ product.id }}</th>
+                    <th><a href="/product/{{ product.id }}">{{ product.product_name }}</a></th>
+                    <th>{{ product.price}} 원</th>
+                    <th>{{ product.add_date |date:'Y-m-d H:i' }}</th>
+                     <th>{{ product.product_image }}</th>
+                </tr>
+                {% endfor %}
+             <a href="{% url 'order_list' %}" class="btn btn-outline-primary">주문목록 보러가기</a></p>
+            </tbody>
+        </table>
+    </div>
+</div>
