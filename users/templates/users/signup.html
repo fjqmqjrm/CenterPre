@@ -10,4 +10,7 @@
     <p>이메일</p>
     <input name="email" type="text">
     <input type="submit" value="회원가입">
+    {% if error %}
+    <p>{{ error }}</p>
+    {% endif %}
 </form>
