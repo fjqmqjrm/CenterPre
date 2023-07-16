@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    body {
+        background-color: #FBF7F2;
+        padding: 0;
+    }
+
+     /* 상단바 */
+    .backwhite {
+        background-color: white;
+        height: 100px;
+    }
+
+     .head-bar {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        p {
+            font-weight: bold;
+        }
+
+        .area-select {
+            background-color: transparent;
+            border: none;
+            font-weight: bold;
+        }
+
+        .category {
+            background-color: transparent;
+            border: none;
+            font-weight: bold;
+        }
+
+        .menu {
+            background-color: transparent;
+            border: none;
+            font-weight: bold;
+        }
+
+        .container{
+            background-color: #FBF7F2;
+            height: 80px;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .purchase-btn{
+            border: none;
+            font-size: 17px;
+            font-weight: bold;
+            background-color: #FBF7F2;
+            margin: 10px;
+        }
+
+        .sell-btn{
+            border: none;
+            font-size: 17px;
+            font-weight: bold;
+            background-color: #FBF7F2;
+            margin: 10px;
+        }
+
+        .menuclickbar{
+            height: 3px;
+            border-radius: 10px;
+            background-color: #FF5555;
+            position:absolute;
+            width: calc(15% - 120px);
+            transform: translateX(687%)
+            ;
+        }
+
+        .box-img {
+           width: 450px; 
+           height: 450px; 
+           border-radius: 20px; 
+           background-color: white; 
+           margin: 20px; 
+           
+           display: flex; 
+           flex-direction: column; 
+           justify-content: center; 
+           text-align: center;
+        }
+
+        .box-text {
+            width: 450px;
+            height: 450px;
+            border-radius: 20px;
+            background-color: white;
+            margin: 20px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .btn-upload {
+            position: relative;
+            left: 1150px;
+
+            background-color: #FF5555;
+            border: none;
+            border-radius: 30px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px 10px 5px 10px;
+        }
+
+</style>
+
+<body>
+    <!-- 상단바 -->
+<div class="backwhite">
+    <div class="head-bar">
+        <div style="display: flex; align-items: center">
+            <img src="/img/udong.png" alt="logo" width="30px" height ="30px" style="margin-right:7px;">
+            <p style="font-size: 23px; margin-right: 20px;">우동마켓</p>
+            <p style="color: #FF5555; margin-right: 10px;">서울시 노원구</p>
+            <button class="area-select">지역 버튼</button>
+        </div>
+
+        <div style="display: flex; align-items: center">
+            <p><span style="font-weight: bold; color: #FF5555;">chae-neey</span>님 로그인</p>
+            <button class="category" style="margin-left: 10px;"><img src="/img/option.png" alt="option" width="25px" height="25px"></button>
+            <button class="menu" style="margin-left: 10px;"><img src="/img/menu.png" alt="menu" width="25px" height="25px"></button>
+        </div>
+    </div>
+</div>
+
+    <!-- 상단바는 여기까지 -->
+
+    <div class="container">
+        <div">
+            <div>
+                <button class="purchase-btn">제품 구매</button>
+                <button class="sell-btn">제품 등록</button>
+            </div>
+                <div role="presentation" class="menuclickbar">
+        </div>
+    </div>
+
+
+<div class="box" style="display: flex; justify-content: center;;">
+    <div class="box-img">
+        <p>판매할 품목의 사진을 넣어주세요.</p>
+        <form>
+            <input type="file">
+        </form>
+
+    </div>
+
+        <div class="box-text">
+            <form>
+                <p>품목명 <input style="background-color: #f0f0f0; border-radius: 5px;"></p>
+                <hr style="width: 400px; margin-top: 10px; margin-bottom: 10px;">
+                <p>품목 상세 설명</p>
+                <textarea cols="50" rows="10" style="background-color: #f0f0f0; border-radius: 7px;" ></textarea>
+                <hr style="width: 400px; margin-top: 10px; margin-bottom: 10px;">
+                <p>품목 가격 <input style="background-color: #f0f0f0; border-radius: 5px;"></p>
+            </form>
+        </div>
+    </div>
+    
+    <hr style="width: 1000px;">
+    
+    <div>
+        <button class="btn-upload">등록하기</button>
+    </div>
+
+
+
+
+</body>
+</html>
