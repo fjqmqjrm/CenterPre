@@ -1,0 +1,46 @@
+<div class="row mt-5">
+    <div class="col-12">
+        <table class="table table-light">
+            <thead class="thead-light">
+            {{ user.username }}
+            <br>
+             <form method="GET" action="{% url 'product:product_list' %}">
+            <div class="form-group">
+                <label for="address">주소:</label>
+               <select name="address" class="form-control" id="address">
+                {% for value, display_text in address_choices %}
+                <option value="{{ value }}" {% if value == selected_address %}selected{% endif %}>{{ display_text }}</option>
+                 {% endfor %}
+            </select>
+            </div>
+            <button type="submit" class="btn btn-primary">필터 적용</button>
+            </form>
+                <tr>
+                    <th space="col">상품명(클릭하면 상세내역 이동)</th>
+                    <th space="col">가격</th>
+                    <th space="col">등록날짜</th>
+                    <th space="col">이미지</th>
+                     <th space="col">게시자</th>
+                    <th space="col">구매자</th>
+                </tr>
+            </thead>
+            <tbody class="text-dark">
+                {% for product in product_list|dictsortreversed:"add_date" %}
+                {% if product.order_status == False %}
+                <tr>
+
+                    <th><a href="/product/{{ product.id }}">{{ product.product_name }}</a></th>
+                    <th>{{ product.price}} 원</th>
+                    <th>{{ product.add_date |date:'Y-m-d H:i' }}</th>
+                     <th><img src="{{ product.product_image.url }}" alt="Product Image"></th>
+                     <th>{{ product.author }}</th>
+                     <th>{{ product.customer }}</th>
+                </tr>
+                {% endif %}
+                {% endfor %}
+                <a href="{% url 'product:product_post' %}" class="btn btn-outline-primary">상품 생성하기</a></p>
+             <a href="{% url 'product:order_list' %}" class="btn btn-outline-primary">주문목록 보러가기</a></p>
+            </tbody>
+        </table>
+    </div>
+</div>
