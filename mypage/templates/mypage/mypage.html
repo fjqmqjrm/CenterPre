@@ -1,0 +1,17 @@
+마이페이지
+<br>
+<br>
+<table>
+    <tr>
+        <td>아이디</td>
+        <td>{{ user.username }}님</td>
+    </tr>
+    <tr>
+        <td>이메일</td>
+        <td>{{ user.email }}</td>
+    </tr>
+</table>
+<br>
+<!--<a href="{% url 'mypage:edit' %}"> 정보 수정</a>-->
+<a href="{% url 'mypage:profile_update' %}" style="color:#d14040f2; font-size:15px;"><i class="fas fa-user-edit"></i>&nbsp;내정보수정</a>&nbsp;&middot;&nbsp;
+
