@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll;
+        }
+        
+        #container {
+            display: flex;
+            flex-direction: column;
+            height: 200vh;
+        }
+        
+        #image1, #image2 {
+            height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #image1 {
+            background-image: url('image/main1.png');
+            position: relative; 
+        }
+        
+        #image2 {
+            background-image: url('image/main2.png');
+        }
+        
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background-color: #ffffff;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        #logo {
+            margin-right: 50px;
+            font-size: larger;
+        }
+        
+        #dropdown-button {
+            padding: 5px 10px;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 4px;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content button {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            background-color: #ffffff;
+            border: none;
+            width: 100%;
+            text-align: left;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* dropdown2 */
+        #dropdown2-button {
+            padding: 5px 10px;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 4px;
+        }
+        
+        .dropdown2 {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown2-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        .dropdown2-content button {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            background-color: #ffffff;
+            border: none;
+            width: 100%;
+            text-align: left;
+        }
+        
+        .dropdown2:hover .dropdown2-content {
+            display: block;
+        }
+
+        .image-button2{
+            width: 30px;
+            height: 30px;
+            border: none;
+
+        }
+
+        .logo-image{
+            width: 35px;
+            height: 28px;
+        }
+        
+        .image-button {
+            width: 33px;
+            height: 23px;
+            border: none;
+        }
+
+        .arrow-img{
+            width:15px;
+            height:10px
+        }
+
+        #locate-button{
+            background-color: #ffffff;
+            border:none;
+            font-size: larger;
+            font-weight: bold;
+        }
+
+        #login{
+            position: relative; 
+            top: 5px; 
+            right:40px; 
+            height: 30px; 
+            font-size: 15px; 
+            font-weight: 900; 
+            height: 30px; 
+            border: none; 
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="logo"><img src="image/udon.png" alt="우동 이미지" class="logo-image">우동마켓</div>
+           
+            <div id="locate"><button id="locate-button">내 동네 찾기<img src="image/arrow.png" alt="화살표 이미지" class="arrow-img"></button></div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <button id="login">회원가입/로그인</button>
+
+            <div class="dropdown">
+                <button id="dropdown-button">
+                    <img src="image/category.png" alt="버튼 이미지" class="image-button2">
+                </button>
+                <div class="dropdown-content">
+                    <div class="category-button">
+                        <button>패션</button>
+                        <button>식품</button>
+                        <button>리빙</button>
+                        <button>뷰티</button>
+                    </div>
+                    <div class="category-button">
+                        <button>유아동/반려</button>
+                        <button>도서/문구/음반</button>
+                        <button>디지털/가전</button>
+                    </div>
+                </div>
+                
+            </div>
+                <div class="dropdown">
+                <button id="dropdown-button">
+                    <img src="image/dropdown.png" alt="버튼 이미지" class="image-button">
+                </button>
+                <div class="dropdown-content">
+                    <button>마이페이지</button>
+                    <button>지역커뮤니티</button>
+                    <button>지역마켓</button>
+                    <button>고객센터</button>
+                </div>
+            </div>
+        </div>
+        <div id="image1"></div>
+        <div id="image2"></div>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const dropdownButton = document.getElementById("dropdown-button");
+            const dropdownContent = document.querySelector(".dropdown-content");
+            
+            dropdownButton.addEventListener("click", function() {
+                dropdownContent.classList.toggle("show");
+            });
+            
+            window.addEventListener("click", function(event) {
+                if (!event.target.matches("#dropdown-button")) {
+                    if (dropdownContent.classList.contains("show")) {
+                        dropdownContent.classList.remove("show");
+                    }
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>
