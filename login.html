@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll;
+            background-color: #FBF7F2;
+        }
+        .text1 {
+            position: fixed;
+            top: -100px; 
+            border: #000000;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #000000;
+            font-size: 40px;
+            font-weight: bold;
+            z-index: 1;
+        }
+
+        .text2 {
+            position: fixed;
+            top: -20px; 
+            border: #000000;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #000000;
+            font-size: 25px;
+            font-weight: bold;
+            z-index: 1;
+        }
+
+
+        :root{
+            --body-background-color: #f5f6f7;
+            --font-color: #4e4e4e;
+            --border-gray-color : #dadada;
+            --black-color: #000000;
+            --black-border-color: #000000;
+        }
+
+
+        *{
+            margin:10;
+            padding:0;
+        }
+
+        body{
+            background-color: #FBF7F2;
+        }
+
+        .main-container{
+            position: fixed;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width:100%;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            margin-top: 12%;
+        }
+        .main-container .main-wrap{
+            width:768px;
+
+        }
+        .main-container .main-wrap .sel-lang-wrap
+        {
+            width: 96px;
+            height: 30px;
+            color: var(--font-color);
+            border: solid 1px var(--border-gray-color);
+        }
+
+        .main-container .main-wrap .logo-wrap{
+            padding-top:55px;
+        }
+
+        .main-container .main-wrap .logo-wrap img
+        {
+            width: 231px;
+            height: 44px;
+        }
+
+        .main-container .main-wrap header .sel-lang-wrap{
+            display:flex;
+            justify-content:flex-end;
+        }
+
+        .main-container .main-wrap header .logo-wrap{
+            display:flex;    
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .login-input-section-wrap{
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .login-input-wrap{
+            width: 465px;
+            height :48px;
+            border: solid 1px var( --border-gray-color );
+            background: white;
+            text-align: center;
+            
+        }
+
+        .password-wrap{
+            margin-top: 13px;
+        }
+
+        .login-input-wrap input{
+            border: none;
+            width:430px;
+            margin-top: 10px;
+            font-size: 14px;
+            margin-left: 10px;
+            height:30px;
+        }
+
+        .login-button-wrap {
+            text-align: center;
+            padding-top: 13px;
+        }
+
+        .login-button-wrap button{
+            width: 465px;
+            height :48px;
+            font-size: 18px;
+            background: var(--black-color);
+            color: white;
+            border: solid 1px var(--black-border-color);
+        }
+
+        .Easy-sgin-in-wrap button{
+            width: 465px;
+            height :48px;
+            font-size: 18px;
+            background: var(--black-color2);
+            color: #4e4e4e;
+            border: solid 1px var(--black-border-color2);
+        }
+
+        .Easy-sgin-in-wrap{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+
+        }
+
+        .Easy-sgin-in-wrap h2{
+            font-size: 20px;
+        }
+
+        .Easy-sgin-in-wrap .sign-button-list
+        {
+            padding-top:25px;
+            list-style: none;
+            width: 465px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .Easy-sgin-in-wrap .sign-button-list{
+            padding-bottom: 10px;
+        }
+
+        .Easy-sgin-in-wrap .sign-button-list button{
+            width: 465px;
+            height: 56px;
+            border: solid 1px var(--border-gray-color);
+            border-color: #7b7b7b;
+            color: #7b7b7b;
+            text-align: center;
+            background: white;
+            padding-left: 20px;
+            background-position: 150px; 
+            background-repeat: no-repeat;
+            background-size: 30px; 
+            text-decoration: none;
+        }
+
+        .button-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+
+        }
+
+        .logout {
+        text-align: center;
+        }
+        .logout a {
+            display: inline-block;
+            text-decoration: none;
+            color: #4e4e4e;
+            transition: color 0.3s;
+        }
+        .logout a:hover {
+            color: #999999;
+        }
+
+        .id{
+            width: 460px;
+            height:45px
+
+        }
+
+        .pw{
+            width: 460px;
+            height:45px
+
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="main-wrap">
+        <br class="login-input-section-wrap">
+            <div class="text1"><b style="color: #B43F3F;">우</b><b style="color: #C2A231;">동</b>
+                <b style="color: #006904;">마</b><b style="color: #002E87;">켓</b></div>
+
+            <div class="login-button-wrap">
+                <input class="id" placeholder="아이디를 입력해주세요."></input>
+                <input class="pw" placeholder="비밀번호를 입력해주세요."></input>
+                <br><br>
+                <a href="#">
+                    <button>로그인</button>
+                </a>
+            </div>
+
+        
+        <div class="logout">
+        </br>
+            <a href="/accounts/logout">로그아웃</a><br />
+        </div>
+
+        </div>
+    </div>
+</body>
+</html>

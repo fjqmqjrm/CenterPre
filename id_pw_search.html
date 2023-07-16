@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll;
+            background-color: #FBF7F2;
+        }
+        .text1 {
+            position: fixed;
+            top: -100px; 
+            border: #000000;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #000000;
+            font-size: 40px;
+            font-weight: bold;
+            z-index: 1;
+        }
+
+        :root{
+            --body-background-color: #f5f6f7;
+            --font-color: #4e4e4e;
+            --border-gray-color : #dadada;
+            --black-color: #000000;
+            --black-border-color: #000000;
+        }
+
+
+        *{
+            margin:10;
+            padding:0;
+        }
+
+        body{
+            background-color: #FBF7F2;
+        }
+
+        .main-container{
+            position: fixed;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width:100%;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            margin-top: 12%;
+        }
+        .main-container .main-wrap{
+            width:768px;
+
+        }
+        .main-container .main-wrap .sel-lang-wrap
+        {
+            width: 96px;
+            height: 30px;
+            color: var(--font-color);
+            border: solid 1px var(--border-gray-color);
+        }
+
+        .main-container .main-wrap .logo-wrap{
+            padding-top:55px;
+        }
+
+        .main-container .main-wrap .logo-wrap img
+        {
+            width: 231px;
+            height: 44px;
+        }
+
+        .main-container .main-wrap header .sel-lang-wrap{
+            display:flex;
+            justify-content:flex-end;
+        }
+
+        .main-container .main-wrap header .logo-wrap{
+            display:flex;    
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .login-input-section-wrap{
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .login-input-wrap input {
+            border: none;
+            width:430px;
+            margin-top: 10px;
+            font-size: 14px;
+            margin-left: 10px;
+            height:30px;
+
+        }
+
+        .login-button-wrap {
+            text-align: center;
+            padding-top: 13px;
+        }
+
+        .login-button-wrap button{
+            width: 465px;
+            height :48px;
+            font-size: 18px;
+            background: var(--black-color);
+            color: white;
+            border: solid 1px var(--black-border-color);
+        }
+
+        .Easy-sgin-in-wrap button{
+            width: 465px;
+            height :48px;
+            font-size: 18px;
+            background: var(--black-color2);
+            color: #4e4e4e;
+            border: solid 1px var(--black-border-color2);
+        }
+
+        .button-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+
+        }
+
+        .logout {
+        text-align: center;
+        }
+        .logout a {
+            display: inline-block;
+            text-decoration: none;
+            color: #4e4e4e;
+            transition: color 0.3s;
+        }
+        .logout a:hover {
+            color: #999999;
+        }
+
+        .email{
+            width: 460px;
+            height:45px
+
+        }
+
+    </style>
+
+
+</head>
+<body>
+   
+    <div class="main-container">
+        <div class="main-wrap">
+        <br class="login-input-section-wrap">
+            <div class="text1">비밀번호 찾기</div>
+            <div class="login-button-wrap">
+                <input class="email" placeholder="이메일을 입력해주세요."></input>
+                <br><br>
+                <button>다음</button>
+
+            </div>
+
+        
+        <div class="logout">
+        </br>
+ 
+            <a href="#">로그인 화면으로 이동</a><br />
+
+        </div>
+
+        </div>
+    </div>
+</body>
+</html>
